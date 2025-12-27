@@ -12,7 +12,7 @@ fillcolor("#442905")
 circle(198.5, 360)
 end_fill()
 
-# hee
+# Mongolian pattern
 width(2)
 color("#EAEA11")
 up()
