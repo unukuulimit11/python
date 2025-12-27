@@ -1,11 +1,11 @@
-from turtle import *
+from turtle import*
 hideturtle()
 bgcolor("black")
 speed("fastest")
 
 # Background
 up()
-goto(0, -199)
+goto(0, -198.9999)
 down()
 begin_fill()
 fillcolor("#442905")
