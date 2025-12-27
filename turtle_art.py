@@ -5,7 +5,7 @@ speed("fastest")
 
 # Background
 up()
-goto(0, -198.9999)
+goto(0, -199)
 down()
 begin_fill()
 fillcolor("#442905")
