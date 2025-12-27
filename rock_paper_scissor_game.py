@@ -17,6 +17,6 @@ while True:
         print("IT IS A TIE")
     elif result == 1 or result == 2 or result == -3:
         print("YOU WON!")
-    elif result == -1 or result == -2 or result == 3:
+    else:
         print("YOU LOST!")
 
