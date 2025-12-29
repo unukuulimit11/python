@@ -24,13 +24,11 @@ def determine_winner(your_choice, computer_choice):
 
 def start_game():
     while True:
-
         your_choice = get_your_choice()
         if your_choice == 'q':
             print("Thanks for playing!")
             break
         computer_choice = choice(choices)
-
         print(determine_winner(your_choice, computer_choice))
 
 start_game()
