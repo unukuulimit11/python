@@ -1,22 +1,38 @@
-import random as r
-choices = ("r", "p", "s")
-name = {"r": "🪨", "p": "📄", "s": "✂️"}
-while True:
-    your_choice = input("Rock, Paper, Scissor? type (r / p / s) or type 'q' to quit: ").lower()
+from random import*
 
-    if your_choice == "q":
-        print("Thank you for playing😇")
-        break
-    if your_choice not in choices:
-        print("Invalid choice!")
-        continue
-    computer_choice = r.choice(choices)
+res = (1, 2, -3)
+name = {"r": "🪨", "p": "📄", "s": "✂️"}
+choices = tuple(name.keys())
+
+def get_your_choice():
+    while True:
+        your_choice = input("Rock, Paper, Scissors? type (r / p / s) or type 'q' to quit: ").lower()
+        if your_choice in choices or your_choice == 'q':
+            return your_choice
+        else :
+            print("Invalid choice!")    
+
+def determine_winner(your_choice, computer_choice):
     print(f"Computer chose: {name[computer_choice]}  VS  Your choice: {name[your_choice]}")
     result = ord(computer_choice) - ord(your_choice)
     if result == 0:
-        print("IT IS A TIE")
-    elif result == 1 or result == 2 or result == -3:
-        print("YOU WON!")
+        return "TIE!"
+    elif result in res:
+        return "YOU WON!"
     else:
-        print("YOU LOST!")
+        return "YOU LOST!"
+
+def start_game():
+    while True:
+
+        your_choice = get_your_choice()
+        if your_choice == 'q':
+            print("Thanks for playing!")
+            break
+        computer_choice = choice(choices)
+
+        print(determine_winner(your_choice, computer_choice))
+
+start_game()
+
 
