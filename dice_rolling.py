@@ -6,7 +6,7 @@ while True:
         number_of_dice = int(input("How many dice: "))
         for i in range(number_of_dice):
             result.append(randint(1, 6))
-        print(result)
+        print(tuple(result))
     elif choice == "n":
         print("Thanks for playing!")
         break
